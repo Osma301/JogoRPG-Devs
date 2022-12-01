@@ -1,2 +1,2 @@
-# JogoRPG-Devs
+# JogoRPgDevs
 JogoRPG 
