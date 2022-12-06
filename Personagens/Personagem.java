@@ -9,6 +9,8 @@ public class Personagem {
 	public String scolhia;
 	
 	
+	
+	
 	public Personagem() {
 		super();
 	}

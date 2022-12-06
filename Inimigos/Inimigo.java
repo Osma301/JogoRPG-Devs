@@ -1,13 +1,16 @@
 
 public class Inimigo {
+	
 	private int vidaP;
+	private int level;
 	private int valorExp;
 	private int valorDano;
 	private String nomeAtaque;
-
-	public Inimigo(int vidaP, int valorExp, int valorDano, String nomeAtaque) {
+	
+	public Inimigo(int vidaP, int level, int valorExp, int valorDano, String nomeAtaque) {
 		super();
 		this.vidaP = vidaP;
+		this.level = level;
 		this.valorExp = valorExp;
 		this.valorDano = valorDano;
 		this.nomeAtaque = nomeAtaque;
@@ -19,6 +22,14 @@ public class Inimigo {
 
 	public void setVidaP(int vidaP) {
 		this.vidaP = vidaP;
+	}
+
+	public int getLevel() {
+		return level;
+	}
+
+	public void setLevel(int level) {
+		this.level = level;
 	}
 
 	public int getValorExp() {
