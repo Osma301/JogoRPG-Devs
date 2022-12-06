@@ -5,6 +5,9 @@ public class Boss {
 	private int vidaBoss;
 	private int danoBoss;
 	private int levelBoss;
-	private String[] habilidades = new String[4];
+	private String[] habilidadesNormais = new String[4];
+	private String[] habiliadadesEspeciais = new String[2];
+	
+	
 	
 }	
