@@ -1,4 +1,5 @@
 package JogoRPGDevs;
+
 import java.util.Scanner;
 public class BucleGame {
 	Cacador cacador = new Cacador();

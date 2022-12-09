@@ -1,3 +1,4 @@
+package JogoRPGDevs;
 
 public class EfeitosDebilitantes {
 	private int qtdTurnos;
