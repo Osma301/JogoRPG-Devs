@@ -1,3 +1,4 @@
+package Inimigos;
 
 public class Inimigo {
 	
@@ -6,6 +7,10 @@ public class Inimigo {
 	private int valorExp;
 	private int valorDano;
 	private String nomeAtaque;
+	
+	public Inimigo() {
+		
+	}
 	
 	public Inimigo(int vidaP, int level, int valorExp, int valorDano, String nomeAtaque) {
 		super();

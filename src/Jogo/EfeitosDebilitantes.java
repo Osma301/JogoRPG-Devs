@@ -1,4 +1,5 @@
-package JogoRPGDevs;
+package Jogo;
+import Personagens.Personagem;
 
 public class EfeitosDebilitantes {
 	private int qtdTurnos;
@@ -37,7 +38,7 @@ public class EfeitosDebilitantes {
 	}
 	
 	public static void envenenar(Personagem personagem) {
-		personagem
+		//personagem
 	}
 
 

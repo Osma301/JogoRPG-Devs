@@ -1,3 +1,6 @@
+package Personagens;
+
+import Jogo.RPG;
 
 public class Cacador extends Personagem implements RPG{
 	@Override

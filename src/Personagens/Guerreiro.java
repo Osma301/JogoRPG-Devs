@@ -1,4 +1,6 @@
+package Personagens;
 
+import Jogo.RPG;
 
 import java.util.ArrayList;
 

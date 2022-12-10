@@ -1,4 +1,4 @@
-package JogoRPGDevs;
+package Boss;
 
 public class Boss {
 	String nome;
