@@ -1,4 +1,5 @@
-package JogoRPGDevs;
+package Jogo;
+import Personagens.Personagem;
 
 public class EfeitosDebilitantes {
 	private int qtdTurnos;
@@ -35,5 +36,13 @@ public class EfeitosDebilitantes {
 	public void setNomeEfeito(String nomeEfeito) {
 		this.nomeEfeito = nomeEfeito;
 	}
+<<<<<<< HEAD:EfeitosDebilitantes.java
+=======
+	
+	public static void envenenar(Personagem personagem) {
+		//personagem
+	}
+
+>>>>>>> fae82d397db6dda022be6af55bcb4c0660a791f7:src/Jogo/EfeitosDebilitantes.java
 
 }

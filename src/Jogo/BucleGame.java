@@ -1,10 +1,18 @@
-package JogoRPGDevs;
+package Jogo;
+
 
 import java.util.Random;
 import java.util.Scanner;
 
+<<<<<<< HEAD:BucleGame.java
 import javax.swing.JPanel;
 public class BucleGame extends JPanel{
+=======
+import Personagens.Cacador;
+
+public class BucleGame {
+	Cacador cacador = new Cacador();
+>>>>>>> fae82d397db6dda022be6af55bcb4c0660a791f7:src/Jogo/BucleGame.java
 	
 	Scanner scan = new Scanner(System.in);
 	

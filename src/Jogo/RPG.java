@@ -1,4 +1,5 @@
-package JogoRPGDevs;
+package Jogo;
+
 
 public interface RPG {
 
