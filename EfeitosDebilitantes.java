@@ -35,10 +35,5 @@ public class EfeitosDebilitantes {
 	public void setNomeEfeito(String nomeEfeito) {
 		this.nomeEfeito = nomeEfeito;
 	}
-	
-	public static void envenenar(Personagem personagem) {
-		personagem
-	}
-
 
 }

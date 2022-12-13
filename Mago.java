@@ -1,3 +1,4 @@
+package JogoRPGDevs;
 
 
 public class Mago extends Personagem{
@@ -33,7 +34,6 @@ public Mago() {
 				case 4: //Gelo
 					this.reduzirMP(30);
 					return 30;
-					
 				case 5: //Raio
 					this.reduzirMP(30);
 					return 30;

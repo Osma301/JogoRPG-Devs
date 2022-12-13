@@ -1,3 +1,4 @@
+package JogoRPGDevs;
 
 public class Cacador extends Personagem implements RPG{
 	@Override
@@ -16,5 +17,28 @@ public class Cacador extends Personagem implements RPG{
 	public void MostrarVida() {
 		setVidaP(2500);
 	System.out.println(getVidaP());
+	}
+
+	@Override
+	public void ataquesEspeciais() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void ataquesNormais() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void atacar() {
+		
+	}
+
+	@Override
+	public void receberDano() {
+		// TODO Auto-generated method stub
+		
 	}
 }
