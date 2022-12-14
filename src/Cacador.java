@@ -1,16 +1,13 @@
-<<<<<<<< HEAD:Cacador.java
-package JogoRPGDevs;
-========
-package Personagens;
+package JogoRPGDevs.src;
 
-import Jogo.RPG;
->>>>>>>> fae82d397db6dda022be6af55bcb4c0660a791f7:src/Personagens/Cacador.java
+import java.util.Scanner;
 
 public class Cacador extends Personagem implements RPG{
+	Scanner scan = new Scanner(System.in);
+
 	@Override
-	
 	public void habilidades() {
-		String habilidades[] = { "Flecha de fogo" , "Estocada Mortal" , "Rede de caza" ,"Invocação de Lobos[Especial]"};
+		String habilidades[] = { "1- Flecha de fogo" , "2- Estocada Mortal" , "3- Rede de caza" ,"4- Invocação de Lobos[Especial]"};
 		for (int i = 0; i < habilidades.length; i++) {
 			System.out.println("Habilidades do Cazador: "+habilidades[i]);
 		}
@@ -26,25 +23,16 @@ public class Cacador extends Personagem implements RPG{
 	}
 
 	@Override
-	public void ataquesEspeciais() {
-		// TODO Auto-generated method stub
+	public void luta() {
+		System.out.println("Escolha o ataque: ");
+		setScolhia(scan.nextInt());
+		habilidades();
 		
-	}
-
-	@Override
-	public void ataquesNormais() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void atacar() {
-		
-	}
-
-	@Override
-	public void receberDano() {
-		// TODO Auto-generated method stub
-		
+		switch (getScolhia()){
+		case 1: {
+			
+		}
+		default:
+		}
 	}
 }

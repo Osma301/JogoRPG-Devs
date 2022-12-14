@@ -1,8 +1,4 @@
-<<<<<<<< HEAD:Inimigo.java
-package JogoRPGDevs;
-========
-package Inimigos;
->>>>>>>> fae82d397db6dda022be6af55bcb4c0660a791f7:src/Inimigos/Inimigo.java
+package JogoRPGDevs.src;
 
 public class Inimigo {
 	

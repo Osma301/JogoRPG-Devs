@@ -1,10 +1,8 @@
-<<<<<<<< HEAD:Personagem.java
-package JogoRPGDevs;
-========
-package Personagens;
+package JogoRPGDevs.src;
 
->>>>>>>> fae82d397db6dda022be6af55bcb4c0660a791f7:src/Personagens/Personagem.java
+import java.util.Scanner;
 
+import javax.swing.SwingConstants;
 
 public class Personagem {
 	private int xp = 0;
@@ -15,14 +13,17 @@ public class Personagem {
 	private int maxMp;
 	private int danoP;
 	private String nomeP;
-	public String scolhia;
-
+	public int scolhia;
+	
+	Scanner scan = new Scanner(System.in);
+	
+	
 	public Personagem() {
 		super();
 	}
 
 	public Personagem(int xp, int levelP, int mp, int vidaP, int maxVida, int maxMp, int danoP, String nomeP,
-			String scolhia) {
+			int scolhia) {
 		super();
 		this.xp = xp;
 		this.levelP = levelP;
@@ -99,11 +100,11 @@ public class Personagem {
 		this.nomeP = nomeP;
 	}
 
-	public String getScolhia() {
+	public int getScolhia() {
 		return scolhia;
 	}
 
-	public void setScolhia(String scolhia) {
+	public void setScolhia(int scolhia) {
 		this.scolhia = scolhia;
 	}
 
@@ -121,4 +122,6 @@ public class Personagem {
 	public void reduzirMP(int mp) {
 		this.mp = this.mp-mp;
 	}
+
+		
 }

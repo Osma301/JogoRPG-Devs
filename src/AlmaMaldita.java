@@ -1,4 +1,4 @@
-package JogoRPGDevs;
+package JogoRPGDevs.src;
 import java.util.Random;
 public class AlmaMaldita extends Inimigo{
 	

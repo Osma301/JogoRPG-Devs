@@ -1,4 +1,4 @@
-package JogoRPGDevs;
+package JogoRPGDevs.src;
 
 public class Mortis extends Boss{
 	

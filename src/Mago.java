@@ -1,10 +1,4 @@
-<<<<<<<< HEAD:Mago.java
-package JogoRPGDevs;
-========
-package Personagens;
-
->>>>>>>> fae82d397db6dda022be6af55bcb4c0660a791f7:src/Personagens/Mago.java
-
+package JogoRPGDevs.src;
 
 public class Mago extends Personagem{
 public Mago() {

@@ -1,5 +1,5 @@
-package JogoRPGDevs;
+package JogoRPGDevs.src;
 
-public class MaquinaSanguinaria {
-
+public class MaquinaSanguinaria extends Boss{
+	
 }
