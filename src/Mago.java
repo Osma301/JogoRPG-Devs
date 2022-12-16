@@ -1,4 +1,4 @@
-package JogoRPGDevs.src;
+
 
 public class Mago extends Personagem implements personagemsInt{
 		public Mago() {

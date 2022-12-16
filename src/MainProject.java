@@ -1,4 +1,4 @@
-package JogoRPGDevs.src;
+
 
 import java.util.Scanner;
 
@@ -19,7 +19,7 @@ public class MainProject {
 		
 		Golen golen = new Golen();
 		Gorgona gorgona = new Gorgona();
-		Fandom fandom = new Fandom();
+		Troll fandom = new Troll();
 		
 		// Personagems 
 		

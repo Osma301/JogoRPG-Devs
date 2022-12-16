@@ -1,4 +1,4 @@
-package JogoRPGDevs.src;
+
 
 import java.util.ArrayList;
 import java.util.Random;

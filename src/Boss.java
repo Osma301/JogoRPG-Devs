@@ -1,4 +1,3 @@
-package JogoRPGDevs.src;
 
 import java.util.Random;
 
