@@ -2,15 +2,13 @@ package JogoRPGDevs.src;
 
 import java.util.Random;
 
-public class Boss {
+public class Boss extends Personagem{
 	String nome;
 	private int vidaBoss;
 	private int danoBoss;
 	private int levelBoss;
 	private int receberAtaque;
 	private Random danor = new Random();
-	
-	
 	
 	
 	public Boss() {
@@ -31,10 +29,10 @@ public class Boss {
 	public int getReceberAtaque() {
 		return receberAtaque;
 	}
-
+	
 
 	public void setReceberAtaque(int receberAtaque) {
-		this.receberAtaque = receberAtaque;
+		this.receberAtaque = receberAtaque - getVidaBoss();
 	}
 
 

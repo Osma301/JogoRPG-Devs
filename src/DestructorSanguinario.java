@@ -1,4 +1,5 @@
 package JogoRPGDevs.src;
-public class DestructorSanguinario extends Boss {
 
+public class DestructorSanguinario extends Boss {
+	
 }

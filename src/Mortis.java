@@ -1,17 +1,18 @@
 package JogoRPGDevs.src;
 
 public class Mortis extends Boss{
-	
-	public int receberAtaque(int danoRecebido) {
-		setVidaBoss(1000);
-	
-		return getVidaBoss() - danoRecebido;
+	public Mortis() {
+		this.setVidaBoss(200);
+		this.setDanoBoss(10);
+		this.setLevelBoss(5);
+		
+		
 	}
 	
-	public int vidaMortis() {
-		setVidaBoss(1000);
-		getReceberAtaque();
-		return getVidaBoss() - receberAtaque(10);
+	public int receberDano(int danoRecebido) {
+		setVidaBoss(getVidaBoss() - danoRecebido);
+		return getVidaBoss();
 	}
+	
 	
 }

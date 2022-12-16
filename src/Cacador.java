@@ -2,7 +2,7 @@ package JogoRPGDevs.src;
 
 import java.util.Scanner;
 
-public class Cacador extends Personagem implements RPG{
+public class Cacador extends Personagem{
 	Scanner scan = new Scanner(System.in);
 
 	@Override
@@ -22,17 +22,5 @@ public class Cacador extends Personagem implements RPG{
 	System.out.println(getVidaP());
 	}
 
-	@Override
-	public void luta() {
-		System.out.println("Escolha o ataque: ");
-		setScolhia(scan.nextInt());
-		habilidades();
-		
-		switch (getScolhia()){
-		case 1: {
-			
-		}
-		default:
-		}
-	}
+
 }

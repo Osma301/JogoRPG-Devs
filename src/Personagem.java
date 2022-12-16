@@ -14,10 +14,15 @@ public class Personagem {
 	private int danoP;
 	private String nomeP;
 	public int scolhia;
+	public Object personagemEscolhido;
+	
+	Cacador cacador;
+	Mago mago;
 	
 	Scanner scan = new Scanner(System.in);
 	
 	
+
 	public Personagem() {
 		super();
 	}
@@ -118,10 +123,22 @@ public class Personagem {
 	public void recebeDano(int dano) {
 		this.vidaP = vidaP - dano;
 	}
-
-	public void reduzirMP(int mp) {
-		this.mp = this.mp-mp;
+	
+	public int reduzirMP(int mp) {
+		setMaxMp(this.mp - mp);
+		return getMaxMp();
+	}
+	public void curar() {
+		// TODO Auto-generated method stub
+		this.reduzirMP(30);
+		setVidaP(getVidaP()+30);
 	}
 
+	public void pasarDeNivel() {
+		if(getXp() > 10) {
+			setLevelP(getLevelP()+1);}
+	}
+	
+	
 		
 }
