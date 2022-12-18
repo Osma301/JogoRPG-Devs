@@ -17,9 +17,6 @@ public class Personagem {
 	public Object personagemEscolhido;
 	public int qtdPocao;
 	
-	Cacador cacador;
-	Mago mago;
-	
 	Scanner scan = new Scanner(System.in);
 	
 	
