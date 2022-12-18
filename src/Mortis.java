@@ -11,8 +11,8 @@ public class Mortis extends Boss{
 	
 	public void receberDano(int danoRecebido) {
 		setVidaBoss(getVidaBoss() - danoRecebido);
-
 	}
+	
 	
 	
 }

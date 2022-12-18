@@ -8,7 +8,7 @@ public class Mago extends Personagem{
 			this.setLevelP(1);
 			this.setXp(0);
 			this.setMaxMp(30);
-			this.setScolhia(1);
+			this.setScolhia(3);
 			
 		}
 		public void ataquesEspeciais() {

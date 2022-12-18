@@ -66,4 +66,8 @@ public class Boss extends Personagem{
 		this.danor = danor;
 	}
 	
+	public void mostrarDados() {
+		System.out.println("\nNome do chefão: "+this.getNome()+"\nHP: "+this.getVidaBoss()+"\nLevel: "+this.getLevelBoss());
+	}
+	
 }	
