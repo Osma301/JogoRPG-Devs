@@ -3,15 +3,15 @@
 public class Mortis extends Boss{
 	public Mortis() {
 		this.setVidaBoss(200);
-		this.setDanoBoss(10);
+		this.setDanoBoss(20);
 		this.setLevelBoss(5);
 		
 		
 	}
 	
-	public int receberDano(int danoRecebido) {
+	public void receberDano(int danoRecebido) {
 		setVidaBoss(getVidaBoss() - danoRecebido);
-		return getVidaBoss();
+
 	}
 	
 	

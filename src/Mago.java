@@ -1,6 +1,6 @@
 
 
-public class Mago extends Personagem implements personagemsInt{
+public class Mago extends Personagem{
 		public Mago() {
 			
 			this.setVidaP(100);
@@ -63,7 +63,7 @@ public class Mago extends Personagem implements personagemsInt{
 			setVidaP(getVidaP()+30);
 		}
 
-		@Override
+		/*@Override
 		public void pasarDeNivel() {
 			// TODO Auto-generated method stub
 			if(getXp() > 10) {
@@ -78,7 +78,7 @@ public class Mago extends Personagem implements personagemsInt{
 			getXp();
 			getMaxMp();
 			getScolhia();
-		}
+		}*/
 		
 
 }

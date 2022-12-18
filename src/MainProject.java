@@ -35,7 +35,7 @@ public class MainProject {
 			scolhia = scan.nextInt();
 			if(scolhia == 1) {
 				System.out.println("Você scolheu o Mago");
-				mago.estadisticas();
+				mago.mostrarAtributos();;
 				mago.ataquesNormais();
 				mago.ataquesEspeciais();
 				System.out.println("Escolhia o ataque: ");
