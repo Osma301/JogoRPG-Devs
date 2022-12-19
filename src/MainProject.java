@@ -101,39 +101,7 @@ public class MainProject {
 			}
 		} while (p1.getVidaP() > 0);
 
-		jogo.turno();
-		jogo.setInimigos(carregaArray());
-
-		jogo.turno();
-		jogo.setInimigos(carregaArray());
-
-		jogo.turno();
-		jogo.setInimigos(carregaArray());
-
-		jogo.browser();
-
-		jogo.turno();
-		jogo.setInimigos(carregaArray());
-
-		jogo.turno();
-		jogo.setInimigos(carregaArray());
-
-		jogo.turno();
-		jogo.setInimigos(carregaArray());
-
-		jogo.browser();
-
-		jogo.turno();
-		jogo.setInimigos(carregaArray());
-
-		jogo.turno();
-		jogo.setInimigos(carregaArray());
-
-		jogo.turno();
-		jogo.setInimigos(carregaArray());
-
-		jogo.browser();
-
+		
 		System.out.println("Fim de jogo");
 	}
 }
