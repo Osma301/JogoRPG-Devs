@@ -119,13 +119,16 @@ public class Jogo {
 				}
 				System.out.println("-----------------------------------------------------------------");
 			}
+			if(personagem.getVidaP()>0) {
 			System.out.println("Você derrotou o "+(nBrowser+1)+"º browser "+getChefoes().get(nBrowser).getNome());
 			personagem.setXp(personagem.getXp()+getChefoes().get(nBrowser).getXpBoss());
 			System.out.println("Você ganhou " + getChefoes().get(nBrowser).getXpBoss() + " pontos de experiência");
 			personagem.verificaLevel();
 			personagem.mostrarAtributos();
 			this.nOponentes++;
-		
+			}else {
+				System.out.println("O seu personagem morreu!\nFim de jogo!");
+			}
 
 	}
 }

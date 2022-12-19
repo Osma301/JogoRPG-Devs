@@ -26,6 +26,7 @@ public class Mago extends Personagem {
 		System.out.println("Ataques normais: " + normais[0]);
 
 	}
+
 	@Override
 	public int atacar(int ataque) {
 		switch (ataque) {
@@ -38,25 +39,39 @@ public class Mago extends Personagem {
 			setDanoP(8);
 			return getDanoP();
 		case 3: // Fogo
-			System.out.println(
-					"Ataque especial de fogo, você gastou 10mp com este ataque \n seu adversário sofreu 30 pontos de dano");
-			this.reduzirMP(10);
-			setDanoP(30);
+
+			if (this.getMp() >= 10) {
+				System.out.println(
+						"Ataque especial de fogo, você gastou 10mp com este ataque \n seu adversário sofreu 30 pontos de dano");
+				setDanoP(30);
+				this.reduzirMP(10);
+			} else {
+				System.out.println("Você não tem MP o suficiente (MP=" + this.getMp() + ")");
+			}
+
 			return getDanoP();
 		case 4: // Gelo
-			System.out.println(
-					"Ataque especial de gelo, você gastou 10mp com este ataque \n seu adversário sofreu 30 pontos de dano");
-			this.reduzirMP(10);
-			setDanoP(30);
+
+			if (this.getMp() >= 10) {
+				System.out.println(
+						"Ataque especial de gelo, você gastou 10mp com este ataque \n seu adversário sofreu 30 pontos de dano");
+				this.reduzirMP(10);
+				setDanoP(30);
+			} else {
+				System.out.println("Você não tem MP o suficiente (MP=" + this.getMp() + ")");
+			}
 			return getDanoP();
 		case 5: // Raio
-			System.out.println(
-					"Ataque especial de raio, você gastou 10mp com este ataque \n seu adversário sofreu 30 pontos de dano");
-			this.reduzirMP(10);
-			setDanoP(30);
-			return getDanoP();
+			if (this.getMp() >= 10) {
+				System.out.println(
+						"Ataque especial de raio, você gastou 10mp com este ataque \n seu adversário sofreu 30 pontos de dano");
+				this.reduzirMP(10);
+				setDanoP(30);
+			} else {
+				return getDanoP();
+			}
 		case 6: // Cura
-			if (getMp() > 30) {
+			if (getMp() >= 15) {
 				System.out.println("Ataque especial de cura, você gastou 15mp com este ataque \n você recuperou 30hp");
 				curar();
 			} else {

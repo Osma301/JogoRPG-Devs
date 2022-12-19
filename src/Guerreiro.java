@@ -10,6 +10,7 @@ public class Guerreiro extends Personagem {
 		this.setLevelP(1);
 		this.setXp(0);
 		this.setMp(25);
+		this.setMaxMp(25);
 		this.setScolhia(2);
 	}
 

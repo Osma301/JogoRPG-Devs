@@ -63,15 +63,11 @@ public class MainProject {
 		Mago mago = new Mago();
 		
 		Personagem p1 = new Personagem();
-<<<<<<< HEAD
-		System.out.println("Escolha um personagem: 1- Mago 2- Guerreiro 3 - Caçador 4- Ver estatísticas");
-			scolhia = scan.nextInt();
-			if(scolhia == 1) {
-=======
+
+
 		System.out.println("Escolha um personagem: 1- Mago 2- Guerreiro 3 - Caçador 4- Ver estatisticas");
 			escolha = scan.nextInt();
 			if(escolha == 1) {
->>>>>>> f9751aa72c2566aad0225c72955d6072bcfe1691
 				System.out.println("Você escolheu o Mago");
 				mago.mostrarAtributos();;
 				mago.ataquesNormais();

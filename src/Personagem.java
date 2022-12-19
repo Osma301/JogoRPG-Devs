@@ -119,13 +119,6 @@ public class Personagem {
 		this.scolhia = scolhia;
 	}
 
-	public void habilidades() {
-		String[] habilidades = new String[4];
-		for (int i = 0; i < habilidades.length; i++) {
-			System.out.println("Habilidades do personagem: " + habilidades[i]);
-		}
-	}
-
 	public void recebeDano(int dano) {
 		this.vidaP = vidaP - dano;
 	}
