@@ -7,6 +7,7 @@ public class Inimigo {
 	private int valorExp;
 	private int valorDano;
 	private String nomeAtaque;
+	private String nome;
 	
 	public Inimigo() {
 		
@@ -19,6 +20,14 @@ public class Inimigo {
 		this.valorExp = valorExp;
 		this.valorDano = valorDano;
 		this.nomeAtaque = nomeAtaque;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
 
 	public int getVidaP() {
@@ -60,5 +69,17 @@ public class Inimigo {
 	public void setNomeAtaque(String nomeAtaque) {
 		this.nomeAtaque = nomeAtaque;
 	}
+	
+	public void sofrerDano(int dano) {
+		this.setVidaP(getVidaP()-dano);
+	}
+	
+	public int atacar() {
+		System.out.println(this.getNomeAtaque()+" Dano: "+getValorDano());
+		return getValorDano();
+	}
 
+	public void mostrarDados() {
+		System.out.println("Nome: "+this.getNome()+"\nHP: "+this.getVidaP()+" Level: "+this.getLevel());
+	}
 }

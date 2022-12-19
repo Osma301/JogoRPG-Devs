@@ -154,7 +154,7 @@ public class Personagem {
 		if(this.getScolhia()==3) {
 			tipoPersonagem = "Mago";
 		}
-		System.out.println("\nNome: " + this.getNomeP() +" "+tipoPersonagem
+		System.out.println(tipoPersonagem
 				+"\nHP: " + this.getVidaP() + "\nMP: " + this.getMp()
 				+ "\nLevel: " + this.getLevelP());
 	}
@@ -308,6 +308,13 @@ public class Personagem {
 			System.out.println();
 			break;
 		}
+	}
+	public void mostrarOpcoes() {
+		
+	}
+	
+	public int atacar(int ataque) {
+		return 0;
 	}
 		
 }

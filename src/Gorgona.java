@@ -1,10 +1,13 @@
 
 public class Gorgona extends Inimigo {
 	public Gorgona() {
+		super.setVidaP(50);
+		super.setLevel(1);
+		super.setValorExp(7);
+		super.setValorDano(8);
+		super.setNomeAtaque("Ataque da serpente");
+		super.setNome("Gorgona");
 		
 	}
-	public Gorgona(int vidaP, int level, int valorExp, int valorDano, String nomeAtaque) {
-		super(vidaP = 120, level = 1, valorExp = 7, valorDano = 8, nomeAtaque = "Ataque da serpente");
-		// TODO Auto-generated constructor stub
-	}
+	
 }
