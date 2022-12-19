@@ -63,15 +63,11 @@ public class MainProject {
 		Mago mago = new Mago();
 		
 		Personagem p1 = new Personagem();
-<<<<<<< HEAD
-		System.out.println("Escolha um personagem: 1- Mago 2- Guerreiro 3 - Caçador 4- Ver estatísticas");
-			scolhia = scan.nextInt();
-			if(scolhia == 1) {
-=======
+
 		System.out.println("Escolha um personagem: 1- Mago 2- Guerreiro 3 - Caçador 4- Ver estatisticas");
 			escolha = scan.nextInt();
 			if(escolha == 1) {
->>>>>>> f9751aa72c2566aad0225c72955d6072bcfe1691
+
 				System.out.println("Você escolheu o Mago");
 				mago.mostrarAtributos();;
 				mago.ataquesNormais();
@@ -95,27 +91,49 @@ public class MainProject {
 			}
 			jogo.setPersonagem(p1);
 			jogo.setnTurno(1);
-			jogo.turno();
-			jogo.setInimigos(carregaArray());
-			jogo.turno();
-			jogo.setInimigos(carregaArray());
-			jogo.turno();
-			jogo.setInimigos(carregaArray());
-			jogo.browser();
-			jogo.turno();
-			jogo.setInimigos(carregaArray());
-			jogo.turno();
-			jogo.setInimigos(carregaArray());
-			jogo.turno();
-			jogo.setInimigos(carregaArray());
-			jogo.browser();
-			jogo.turno();
-			jogo.setInimigos(carregaArray());
-			jogo.turno();
-			jogo.setInimigos(carregaArray());
-			jogo.turno();
-			jogo.setInimigos(carregaArray());
-			jogo.browser();
+			int count = 0;
+			do{
+				jogo.turno();
+				jogo.setInimigos(carregaArray());
+				count++;
+				if(count % 3 == 0 && p1.getVidaP() > 0) {
+					jogo.browser();
+				}
+			}while(p1.getVidaP() > 0);
+			
+//			jogo.turno();
+//			jogo.setInimigos(carregaArray());
+//			
+//			jogo.turno();
+//			jogo.setInimigos(carregaArray());
+//			
+//			jogo.turno();
+//			jogo.setInimigos(carregaArray());
+//			
+//			jogo.browser();
+//			
+//			jogo.turno();
+//			jogo.setInimigos(carregaArray());
+//			
+//			jogo.turno();
+//			jogo.setInimigos(carregaArray());
+//			
+//			jogo.turno();
+//			jogo.setInimigos(carregaArray());
+//			
+//			jogo.browser();
+//			
+//			jogo.turno();
+//			jogo.setInimigos(carregaArray());
+//			
+//			jogo.turno();
+//			jogo.setInimigos(carregaArray());
+//			
+//			jogo.turno();
+//			jogo.setInimigos(carregaArray());
+//			
+//			jogo.browser();
+			
 			System.out.println("Fim de jogo");
 		}
 	}
