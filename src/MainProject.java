@@ -99,9 +99,11 @@ public class MainProject {
 			if (count % 3 == 0 && p1.getVidaP() > 0) {
 				jogo.browser();
 			}
-		} while (p1.getVidaP() > 0);
+		} while (p1.getVidaP() > 0 && count < 9);
 
-		
+		if (p1.getVidaP() > 0) {
+			System.out.println("Voce zerou o jogo! Parabéns!!");
+		}
 		System.out.println("Fim de jogo");
 	}
 }
