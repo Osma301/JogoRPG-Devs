@@ -26,6 +26,8 @@ public class Medusa extends Boss {
 		}
 		if (aux == 2) {
 			System.out.print("O Browser atacou com 3 - Ataque pesonhento ");
+			this.setTipoDanoDeblitante("Envenenamento");
+			this.setValorDanoDebilitante(3);
 			return 25;
 		}
 

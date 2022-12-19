@@ -71,11 +71,12 @@ public class Jogo {
 			if (getInimigos().get(aux).getVidaP() > 0) {
 				System.out.println("\nTurno do seu oponente!");
 				personagem.recebeDano(getInimigos().get(aux).atacar());
-				System.out.println(" (Seu HP:" + personagem.getVidaP() + ", Seu MP: " + personagem.getMp() + ")");
-				if (personagem.getVidaP() <= 0) {
-					break;
+				if(getInimigos().get(aux).getValorDanoDebilitante() > 0) {
+					personagem.recebeDano(getInimigos().get(aux).getValorDanoDebilitante());
+					System.out.println("\nVocê sofreu dano debilitante de " + getInimigos().get(aux).getValorDanoDebilitante() + " por " + getInimigos().get(aux).getTipoDanoDeblitante());
 				}
-			}
+				System.out.println("\n(Seu HP:" + personagem.getVidaP() + ", Seu MP: " + personagem.getMp() + ")");
+							}
 			if (personagem.getVidaP() <= 0) {
 				System.out.println("Você morreu, fim de jogo!");
 			}
@@ -129,6 +130,10 @@ public class Jogo {
 			if (getChefoes().get(nBrowser).getVidaBoss() > 0) {
 				System.out.println("Turno do seu oponente!");
 				personagem.recebeDano(getChefoes().get(nBrowser).atacar());
+				if(getChefoes().get(nBrowser).getValorDanoDebilitante() > 0) {
+					personagem.recebeDano(getChefoes().get(nBrowser).getValorDanoDebilitante());
+					System.out.println("\nVocê sofreu dano debilitante de " + getChefoes().get(nBrowser).getValorDanoDebilitante() + " por " + getChefoes().get(nBrowser).getTipoDanoDeblitante());
+				}
 				System.out.println(" (Seu HP:" + personagem.getVidaP() + ", Seu MP: " + personagem.getMp() + ")");
 			}
 			if (personagem.getVidaP() <= 0) {

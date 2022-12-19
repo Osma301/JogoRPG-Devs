@@ -7,6 +7,7 @@ public class Mortis extends Boss{
 		this.setLevelBoss(5);
 		this.setNome("Mortis");
 		this.setXpBoss(20);
+		
 	}
 	public void receberDano(int danoRecebido) {
 		setVidaBoss(getVidaBoss() - danoRecebido);
@@ -26,7 +27,9 @@ public class Mortis extends Boss{
 		}
 		if (aux == 2) {
 			System.out.print("O Browser atacou com 3 - Envenenar a alma");
-			return 30;
+			this.setTipoDanoDeblitante("Envenenamento");
+			this.setValorDanoDebilitante(2);
+			return 30;				
 		}
 
 		return 0;
