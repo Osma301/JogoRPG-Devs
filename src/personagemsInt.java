@@ -1,3 +1,5 @@
+package JogoRPGDevs.src;
+
 
 
 public interface personagemsInt {

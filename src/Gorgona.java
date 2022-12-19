@@ -1,10 +1,13 @@
+package JogoRPGDevs.src;
+
 
 public class Gorgona extends Inimigo {
 	public Gorgona() {
-		
+		super.setVidaP(150);
+		super.setLevel(1);
+		super.setValorExp(10);
+		super.setValorDano(15);
+		super.setNomeAtaque("Ataque da Serpente");
 	}
-	public Gorgona(int vidaP, int level, int valorExp, int valorDano, String nomeAtaque) {
-		super(vidaP = 120, level = 1, valorExp = 7, valorDano = 8, nomeAtaque = "Ataque da serpente");
-		// TODO Auto-generated constructor stub
-	}
+	
 }

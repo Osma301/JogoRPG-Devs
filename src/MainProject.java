@@ -1,5 +1,7 @@
+package JogoRPGDevs.src;
 
-
+import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.Scanner;
 
 public class MainProject {
@@ -21,6 +23,22 @@ public class MainProject {
 		Gorgona gorgona = new Gorgona();
 		Troll fandom = new Troll();
 		
+		ArrayList<Inimigo> inimigosList = new ArrayList<>(); 
+		
+		inimigosList.add(golen);
+		inimigosList.add(gorgona);
+		inimigosList.add(fandom);
+		
+	
+		
+		
+		for (int i = 0; i < inimigosList.size(); i++) {
+			
+			System.out.println(inimigosList.get(i).getVidaP()-10);
+			
+			
+			
+		}
 		// Personagems 
 		
 		Cacador cacador = new Cacador();
@@ -29,32 +47,14 @@ public class MainProject {
 		
 		Personagem p1 = new Personagem();
 		
-		while(flag) {
-			
-			System.out.println("Escolhia um personagem: 1- Mago 2- Guerreiro 3 - Cazador 4- Ver estadisticas");
-			scolhia = scan.nextInt();
-			if(scolhia == 1) {
-				System.out.println("Você scolheu o Mago");
-				mago.estadisticas();
-				mago.ataquesNormais();
-				mago.ataquesEspeciais();
-				System.out.println("Escolhia o ataque: ");
-				ataque = scan.nextInt();
-				if(ataque == 1) {
-						mago.atacar(1);
-						
-						
-						System.out.println(mortis.receberDano(50));
-						
-						if(mortis.getVidaBoss() <= 0) {
-							System.out.println(" Primer inimigo: Mortis morreu");
-							flag = false;
-						}
-						
-					}
-				}
-			
-		}
+		
+		
+		
+		
+		
+		
+		
+	
 	}
 
 }

@@ -1,3 +1,5 @@
+package JogoRPGDevs.src;
+
 
 public class MaquinaSanguinaria extends Inimigo {
 	public MaquinaSanguinaria() {

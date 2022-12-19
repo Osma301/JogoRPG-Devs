@@ -1,3 +1,5 @@
+package JogoRPGDevs.src;
+
 
 
 import java.awt.Color;

@@ -1,3 +1,5 @@
+package JogoRPGDevs.src;
+
 
 
 import java.util.Scanner;
@@ -140,5 +142,4 @@ public class Personagem {
 	}
 	
 	
-		
 }
