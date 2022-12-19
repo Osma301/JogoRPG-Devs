@@ -18,7 +18,7 @@ public class Cacador extends Personagem {
 	Scanner scan = new Scanner(System.in);
 
 	public void ataquesEspeciais() {
-		String especiais[] = { "1 - Flecha de fogo, 2 - Invocação de lobos" };
+		String especiais[] = { "3 - Flecha de fogo, 4 - Invocação de lobos" };
 		for (int i = 0; i < especiais.length; i++) {
 			System.out.println("Ataques especiais: " + especiais[i]);
 		}
@@ -43,21 +43,37 @@ public class Cacador extends Personagem {
 			setDanoP(8);
 			return getDanoP();
 		case 3: // Flecha de fogo
-			System.out.println(
-					"Flecha de fogo, você gastou 10mp com este ataque \n seu adversário sofreu 30 pontos de dano");
-			this.reduzirMP(10);
-			setDanoP(30);
-			return getDanoP();
+			if (this.getMp() >= 10) {
+				System.out.println(
+						"Flecha de fogo, você gastou 10mp com este ataque \n seu adversário sofreu 30 pontos de dano");
+				this.reduzirMP(10);
+				setDanoP(30);
+				return getDanoP();
+			} else {
+				System.out.println("Você não tem MP o suficiente (MP: " + this.getMp() + ")");
+			}
 		case 4: // Invocação de lobos
-			System.out.println(
-					"Invocação de lobos, você gastou 15mp com este ataque \n seu adversário sofreu 35 pontos de dano");
-			this.reduzirMP(15);
-			setDanoP(35);
-			return getDanoP();
+			if (this.getMp() >= 15) {
+				System.out.println(
+						"Invocação de lobos, você gastou 15mp com este ataque \n seu adversário sofreu 35 pontos de dano");
+				this.reduzirMP(15);
+				setDanoP(35);
+				return getDanoP();
+			} else {
+				System.out.println("Você não tem MP o suficiente (MP: " + this.getMp() + ")");
+			}
 		default:
 			return 0;
 
 		}
+
+	}
+	
+	@Override
+	public void mostrarOpcoes() {
+		System.out.println("Sua vez de atacar, escolha uma das opções:");
+		ataquesNormais();
+		ataquesEspeciais();
 
 	}
 

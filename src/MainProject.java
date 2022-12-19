@@ -3,7 +3,23 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
+
 public class MainProject {
+	public static ArrayList<Inimigo> carregaArray() {
+		ArrayList<Inimigo> inimigos = new ArrayList();
+		Golen golen = new Golen();
+		inimigos.add(golen);
+		Gorgona gorgona = new Gorgona();
+		inimigos.add(gorgona);
+		Troll troll = new Troll();
+		inimigos.add(troll);
+		MaquinaSanguinaria maquinaSanguinaria = new MaquinaSanguinaria();
+		inimigos.add(maquinaSanguinaria);
+		AlmaMaldita almaMaldita = new AlmaMaldita();
+		inimigos.add(almaMaldita);
+		return inimigos;
+		
+	}
 	public static void main(String[] args) {
 	
 		boolean flag = true;
@@ -45,7 +61,7 @@ public class MainProject {
 		Mago mago = new Mago();
 		
 		Personagem p1 = new Personagem();
-		System.out.println("Escolhia um personagem: 1- Mago 2- Guerreiro 3 - Caçador 4- Ver estadisticas");
+		System.out.println("Escolha um personagem: 1- Mago 2- Guerreiro 3 - Caçador 4- Ver estatísticas");
 			scolhia = scan.nextInt();
 			if(scolhia == 1) {
 				System.out.println("Você escolheu o Mago");
@@ -72,6 +88,27 @@ public class MainProject {
 			jogo.setPersonagem(p1);
 			jogo.setnTurno(1);
 			jogo.turno();
+			jogo.setInimigos(carregaArray());
+			jogo.turno();
+			jogo.setInimigos(carregaArray());
+			jogo.turno();
+			jogo.setInimigos(carregaArray());
+			jogo.browser();
+			jogo.turno();
+			jogo.setInimigos(carregaArray());
+			jogo.turno();
+			jogo.setInimigos(carregaArray());
+			jogo.turno();
+			jogo.setInimigos(carregaArray());
+			jogo.browser();
+			jogo.turno();
+			jogo.setInimigos(carregaArray());
+			jogo.turno();
+			jogo.setInimigos(carregaArray());
+			jogo.turno();
+			jogo.setInimigos(carregaArray());
+			jogo.browser();
+			System.out.println("Fim de jogo");
 		}
 	}
 

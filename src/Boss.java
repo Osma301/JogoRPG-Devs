@@ -7,6 +7,7 @@ public class Boss extends Personagem{
 	private int danoBoss;
 	private int levelBoss;
 	private int receberAtaque;
+	private int xpBoss;
 	private Random danor = new Random();
 	
 	
@@ -15,16 +16,27 @@ public class Boss extends Personagem{
 	}
 	
 	
-	public Boss(String nome, int vidaBoss, int danoBoss, int levelBoss) {
+	public Boss(String nome, int vidaBoss, int danoBoss, int levelBoss,int xpBoss) {
 		super();
 		this.nome = nome;
 		this.vidaBoss = vidaBoss;
 		this.danoBoss = danoBoss;
 		this.levelBoss = levelBoss;
+		this.xpBoss = xpBoss;
 
 	}
 	
 	
+	public int getXpBoss() {
+		return xpBoss;
+	}
+
+
+	public void setXpBoss(int xpBoss) {
+		this.xpBoss = xpBoss;
+	}
+
+
 	public int getReceberAtaque() {
 		return receberAtaque;
 	}
@@ -66,8 +78,16 @@ public class Boss extends Personagem{
 		this.danor = danor;
 	}
 	
+	public int atacar() {
+		return 0;
+	}
+	
 	public void mostrarDados() {
 		System.out.println("\nNome do chefão: "+this.getNome()+"\nHP: "+this.getVidaBoss()+"\nLevel: "+this.getLevelBoss());
+	}
+	
+	public void sofrerDano(int dano) {
+		this.setVidaBoss(this.getVidaBoss()-dano);
 	}
 	
 }	

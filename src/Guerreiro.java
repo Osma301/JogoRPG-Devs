@@ -14,7 +14,7 @@ public class Guerreiro extends Personagem {
 	}
 
 	public void ataquesEspeciais() {
-		String especiais[] = { "1 - Patada Brutal, 2 - Escudo da morte" };
+		String especiais[] = { "3 - Patada Brutal, 4 - Escudo da morte" };
 		for (int i = 0; i < especiais.length; i++) {
 			System.out.println("Ataques especiais: " + especiais[i]);
 		}
@@ -32,28 +32,44 @@ public class Guerreiro extends Personagem {
 		switch (ataque) {
 		case 1: // Ataque com Soco
 			System.out.println("Ataco com Soco, seu adversário sofreu 5 pontos de dano");
-			setDanoP(5);
+			setDanoP(20);
 			return getDanoP();
 		case 2: // Cabeçada
 			System.out.println("Ataque com Cabeçada, seu adversário sofreu 8 pontos de dano");
-			setDanoP(8);
+			setDanoP(21);
 			return getDanoP();
 		case 3: // Patada Brutal
-			System.out.println(
-					"Ataque especial de Patada brutal seu adversário sofreu 25 pontos de dano, você perdeu 10 pontos de MP.");
-			setDanoP(25);
+			if(this.getMp()>=10) {
+				System.out.println(
+					"Ataque especial de Patada brutal seu adversário sofreu 25 pontos de dano, você perdeu 10 pontos de MP.");setDanoP(25);
 			setMp(getMp() - 10);
 			return getDanoP();
+			}else {
+			System.out.println("Você não tem MP o suficiente (MP: "+this.getMp()+")");	
+			}
+			
 		case 4: // Escudo Da Morte
-			System.out.println(
+			if(this.getMp()>=10) {
+				System.out.println(
 					"Ataque especial Escudo da Morte seu adversário sofreu 25 pontos de dano, você perdeu 10 pontos de MP.");
 			setDanoP(25);
 			setMp(getMp() - 10);
 			return getDanoP();
+			}else {
+				System.out.println("Você não tem MP o suficiente (MP: "+this.getMp()+")");	
+			}
 		default:
 			return 0;
 
 		}
+	}
+	
+	@Override
+	public void mostrarOpcoes() {
+		System.out.println("Sua vez de atacar, escolha uma das opções:");
+		ataquesNormais();
+		ataquesEspeciais();
+
 	}
 
 }
