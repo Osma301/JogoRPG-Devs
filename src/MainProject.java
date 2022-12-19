@@ -21,9 +21,7 @@ public class MainProject {
 
 	public static void main(String[] args) {
 
-		boolean flag = true;
 		int escolha;
-		int ataque;
 		Jogo jogo = new Jogo();
 		Scanner scan = new Scanner(System.in);
 
@@ -63,12 +61,11 @@ public class MainProject {
 
 		Personagem p1 = new Personagem();
 
-		System.out.println("Escolha um personagem: 1- Mago 2- Guerreiro 3 - Caçador 4- Ver estatisticas");
+		System.out.println("Escolha um personagem: 1- Mago 2- Guerreiro 3 - Caçador");
 		escolha = scan.nextInt();
 		if (escolha == 1) {
 			System.out.println("Você escolheu o Mago");
 			mago.mostrarAtributos();
-			;
 			mago.ataquesNormais();
 			mago.ataquesEspeciais();
 			p1 = mago;
@@ -84,11 +81,11 @@ public class MainProject {
 		if (escolha == 3) {
 			System.out.println("Você escolheu o Caçador");
 			cacador.mostrarAtributos();
-			;
 			cacador.ataquesNormais();
 			cacador.ataquesEspeciais();
 			p1 = cacador;
 		}
+		
 		jogo.setPersonagem(p1);
 		jogo.setnTurno(1);
 		int count = 0;
