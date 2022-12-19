@@ -62,23 +62,27 @@ public class Jogo {
 		System.out.println("Seu oponente " + this.nOponentes + " é:");
 		getInimigos().get(aux).mostrarDados();
 		while (personagem.getVidaP() > 0 && getInimigos().get(aux).getVidaP() > 0) {
-			
-				personagem.mostrarOpcoes();
-				int opcao = scanner.nextInt();
-				getInimigos().get(aux).sofrerDano(personagem.atacar(opcao));
-				getInimigos().get(aux).mostrarDados();
-				if (getInimigos().get(aux).getVidaP() > 0) {
-					System.out.println("Turno do seu oponente!");
-					personagem.recebeDano(getInimigos().get(aux).atacar());
-				}
-				if (personagem.getVidaP() <= 0) {
-					System.out.println("Você morreu, fim de jogo!");
-				}
-		}
-				System.out.println("-----------------------------------------------------------------");
-				// personagem.mostrarAtributos();
 
-		if(personagem.getVidaP() > 0) {		
+			personagem.mostrarOpcoes();
+			int opcao = scanner.nextInt();
+			getInimigos().get(aux).sofrerDano(personagem.atacar(opcao));
+			getInimigos().get(aux).mostrarDados();
+			if (getInimigos().get(aux).getVidaP() > 0) {
+				System.out.println("Turno do seu oponente!");
+				personagem.recebeDano(getInimigos().get(aux).atacar());
+				System.out.println(" (Seu HP:" + personagem.getVidaP() + ", Seu MP: " + personagem.getMp() + ")");
+				if (personagem.getVidaP() <= 0) {
+					break;
+				}
+			}
+			if (personagem.getVidaP() <= 0) {
+				System.out.println("Você morreu, fim de jogo!");
+			}
+		}
+		System.out.println("-----------------------------------------------------------------");
+		// personagem.mostrarAtributos();
+
+		if (personagem.getVidaP() > 0) {
 			System.out.println("Você derrotou o oponente " + this.nOponentes);
 			personagem.setXp(personagem.getXp() + getInimigos().get(aux).getValorExp());
 			System.out.println("Você ganhou " + getInimigos().get(aux).getValorExp() + " pontos de experiência");
@@ -86,12 +90,21 @@ public class Jogo {
 			personagem.mostrarAtributos();
 			this.nOponentes++;
 		}
+		if (personagem.getQtdPocao() > 0) {
+			System.out.println("Deseja utilizar uma poção e recuperar pontos de HP(+50)\n1 - Sim 2 - Não");
+			int opcao = scanner.nextInt();
+			if (opcao == 1) {
+				personagem.setQtdPocao(personagem.getQtdPocao() - 1);
+				personagem.tomarPocao();
+				System.out.println("O personagem bebeu uma poção, HP= "+personagem.getVidaP());
+			}
+		}
 	}
 
 	public void browser() {
 		Scanner scan = new Scanner(System.in);
 		int nBrowser = 0;
-		switch(this.getnTurno()) {
+		switch (this.getnTurno()) {
 		case 4:
 			System.out.println("Chegou a hora de você infrentar o 1º Browser");
 			nBrowser = 0;
@@ -105,35 +118,37 @@ public class Jogo {
 			nBrowser = 2;
 			break;
 		}
-		
-			getChefoes().get(nBrowser).mostrarDados();
-			while (personagem.getVidaP() > 0 && getChefoes().get(nBrowser).getVidaBoss() > 0) {
-				personagem.mostrarOpcoes();
-				int opcao = scan.nextInt();
-				getChefoes().get(nBrowser).sofrerDano(personagem.atacar(opcao));
-				getChefoes().get(nBrowser).mostrarDados();
-				if (getChefoes().get(nBrowser).getVidaBoss() > 0) {
-					System.out.println("Turno do seu oponente!");
-					personagem.recebeDano(getChefoes().get(nBrowser).atacar());
-				}
-				if (personagem.getVidaP() <= 0) {
-					System.out.println("Você morreu, fim de jogo!");
-				}
-				System.out.println("-----------------------------------------------------------------");
-			}
 
-			if(personagem.getVidaP()>0) {
-			System.out.println("Você derrotou o "+(nBrowser+1)+"º browser "+getChefoes().get(nBrowser).getNome());
-			personagem.setXp(personagem.getXp()+getChefoes().get(nBrowser).getXpBoss());
+		getChefoes().get(nBrowser).mostrarDados();
+		while (personagem.getVidaP() > 0 && getChefoes().get(nBrowser).getVidaBoss() > 0) {
+			personagem.mostrarOpcoes();
+			int opcao = scan.nextInt();
+			getChefoes().get(nBrowser).sofrerDano(personagem.atacar(opcao));
+			getChefoes().get(nBrowser).mostrarDados();
+			if (getChefoes().get(nBrowser).getVidaBoss() > 0) {
+				System.out.println("Turno do seu oponente!");
+				personagem.recebeDano(getChefoes().get(nBrowser).atacar());
+				System.out.println(" (Seu HP:" + personagem.getVidaP() + ", Seu MP: " + personagem.getMp() + ")");
+			}
+			if (personagem.getVidaP() <= 0) {
+				System.out.println("Você morreu, fim de jogo!");
+			}
+			System.out.println("-----------------------------------------------------------------");
+		}
+
+		if (personagem.getVidaP() > 0) {
+			System.out
+					.println("Você derrotou o " + (nBrowser + 1) + "º browser " + getChefoes().get(nBrowser).getNome());
+			personagem.setXp(personagem.getXp() + getChefoes().get(nBrowser).getXpBoss());
 			System.out.println("Você ganhou " + getChefoes().get(nBrowser).getXpBoss() + " pontos de experiência");
 			personagem.verificaLevel();
 			personagem.mostrarAtributos();
 			this.nOponentes++;
-			}else {
-				System.out.println("O seu personagem morreu!\nFim de jogo!");
-			}
-
-			
+		} else {
+			System.out.println("O seu personagem morreu!\nFim de jogo!");
+		}
+		System.out.println("Você ganhou 2 poções");
+		personagem.setQtdPocao(personagem.getQtdPocao() + 2);
 
 	}
 }

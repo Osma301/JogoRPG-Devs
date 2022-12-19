@@ -101,7 +101,6 @@ public class MainProject {
 			}
 		} while (p1.getVidaP() > 0);
 
-		
 		System.out.println("Fim de jogo");
 	}
 }

@@ -4,14 +4,15 @@ import java.util.Scanner;
 public class Cacador extends Personagem {
 	public Cacador() {
 
-		this.setVidaP(120);
-		this.setMaxVida(120);
+		this.setVidaP(153);
+		this.setMaxVida(153);
 		this.setDanoP(44);
 		this.setLevelP(1);
 		this.setXp(0);
-		this.setMp(20);
-		this.setMaxMp(20);
+		this.setMp(70);
+		this.setMaxMp(70);
 		this.setScolhia(1);
+		this.setQtdPocao(0);
 
 	}
 
@@ -39,8 +40,8 @@ public class Cacador extends Personagem {
 			setDanoP(17);
 			return getDanoP();
 		case 2: // Rede de caça
-			System.out.println("Rede de caça, seu adversário sofreu 8 pontos de dano");
-			setDanoP(8);
+			System.out.println("Rede de caça, seu adversário sofreu 15 pontos de dano");
+			setDanoP(15);
 			return getDanoP();
 		case 3: // Flecha de fogo
 			if (this.getMp() >= 10) {

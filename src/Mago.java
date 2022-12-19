@@ -2,14 +2,15 @@
 public class Mago extends Personagem {
 	public Mago() {
 
-		this.setVidaP(100);
-		this.setMaxVida(100);
+		this.setVidaP(150);
+		this.setMaxVida(150);
 		this.setDanoP(40);
 		this.setLevelP(1);
 		this.setXp(0);
-		this.setMp(30);
-		this.setMaxMp(30);
+		this.setMp(50);
+		this.setMaxMp(50);
 		this.setScolhia(3);
+		this.setQtdPocao(0);
 
 	}
 
@@ -34,12 +35,13 @@ public class Mago extends Personagem {
 			System.out.println("Ataque com bastão, seu adversário sofreu 10 pontos de dano");
 			setDanoP(10);
 			return getDanoP();
+			
 		case 2: // Soco
 			System.out.println("Ataque com soco, seu adversário sofreu 8 pontos de dano");
 			setDanoP(8);
 			return getDanoP();
+			
 		case 3: // Fogo
-
 			if (this.getMp() >= 10) {
 				System.out.println(
 						"Ataque especial de fogo, você gastou 10mp com este ataque \n seu adversário sofreu 30 pontos de dano");
@@ -50,6 +52,8 @@ public class Mago extends Personagem {
 			}
 
 			return getDanoP();
+			
+			
 		case 4: // Gelo
 
 			if (this.getMp() >= 10) {
@@ -61,6 +65,7 @@ public class Mago extends Personagem {
 				System.out.println("Você não tem MP o suficiente (MP=" + this.getMp() + ")");
 			}
 			return getDanoP();
+			
 		case 5: // Raio
 			if (this.getMp() >= 10) {
 				System.out.println(
@@ -70,6 +75,7 @@ public class Mago extends Personagem {
 			} else {
 				return getDanoP();
 			}
+			
 		case 6: // Cura
 			if (getMp() >= 15) {
 				System.out.println("Ataque especial de cura, você gastou 15mp com este ataque \n você recuperou 30hp");
@@ -77,7 +83,7 @@ public class Mago extends Personagem {
 			} else {
 				System.out.println("Você não tem MP suficiente.");
 			}
-
+			
 		default:
 			return 0;
 
