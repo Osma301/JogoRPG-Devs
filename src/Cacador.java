@@ -18,14 +18,14 @@ public class Cacador extends Personagem {
 	Scanner scan = new Scanner(System.in);
 
 	public void ataquesEspeciais() {
-		String especiais[] = { "1 - Flecha de fogo, 2 - Invocação de lobos" };
+		String especiais[] = { "3 - Flecha de fogo, 4 - Invocação de lobos" };
 		for (int i = 0; i < especiais.length; i++) {
 			System.out.println("Ataques especiais: " + especiais[i]);
 		}
 	}
 
 	public void ataquesNormais() {
-		String normais[] = { "1 - Estocada Mortal", "2 - Rede de caça" };
+		String normais[] = { "1 - Estocada Mortal 2 - Rede de caça" };
 		for (int i = 0; i < normais.length; i++) {
 			System.out.println("Ataques normais: " + normais[i]);
 		}
@@ -58,6 +58,14 @@ public class Cacador extends Personagem {
 			return 0;
 
 		}
+
+	}
+	
+	@Override
+	public void mostrarOpcoes() {
+		System.out.println("Sua vez de atacar, escolha uma das opções:");
+		ataquesNormais();
+		ataquesEspeciais();
 
 	}
 

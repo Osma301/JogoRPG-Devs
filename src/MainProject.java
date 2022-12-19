@@ -7,11 +7,13 @@ public class MainProject {
 	public static void main(String[] args) {
 	
 		boolean flag = true;
-		int scolhia;
+		int escolha;
 		int ataque;
 		Jogo jogo = new Jogo();
 		Scanner scan = new Scanner(System.in);
+		
 		//Chefões
+		
 		ArrayList<Boss> boss = new ArrayList();
 		Medusa medusa = new Medusa();
 		boss.add(medusa);
@@ -21,7 +23,7 @@ public class MainProject {
 		boss.add(mortis);
 		jogo.setChefoes(boss);
 		
-		// Inimigos
+		// Inimigos		
 		
 		ArrayList<Inimigo> inimigos = new ArrayList();
 		Golen golen = new Golen();
@@ -45,9 +47,9 @@ public class MainProject {
 		Mago mago = new Mago();
 		
 		Personagem p1 = new Personagem();
-		System.out.println("Escolhia um personagem: 1- Mago 2- Guerreiro 3 - Caçador 4- Ver estadisticas");
-			scolhia = scan.nextInt();
-			if(scolhia == 1) {
+		System.out.println("Escolha um personagem: 1- Mago 2- Guerreiro 3 - Caçador 4- Ver estatisticas");
+			escolha = scan.nextInt();
+			if(escolha == 1) {
 				System.out.println("Você escolheu o Mago");
 				mago.mostrarAtributos();;
 				mago.ataquesNormais();
@@ -55,16 +57,16 @@ public class MainProject {
 				p1 = mago;
 				
 				}
-			if(scolhia== 2) {
+			if(escolha== 2) {
 				System.out.println("Você escolheu o Guerreiro");
 				guerreiro.mostrarAtributos();
 				guerreiro.ataquesNormais();
 				guerreiro.ataquesEspeciais();
-				p1=guerreiro;
+				p1 = guerreiro;
 			}
-			if(scolhia ==3) {
+			if(escolha ==3) {
 				System.out.println("Você escolheu o Caçador");
-			cacador.mostrarAtributos();;
+				cacador.mostrarAtributos();;
 				cacador.ataquesNormais();
 				cacador.ataquesEspeciais();
 				p1 = cacador;

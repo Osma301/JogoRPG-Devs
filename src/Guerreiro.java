@@ -14,7 +14,7 @@ public class Guerreiro extends Personagem {
 	}
 
 	public void ataquesEspeciais() {
-		String especiais[] = { "1 - Patada Brutal, 2 - Escudo da morte" };
+		String especiais[] = { "3 - Patada Brutal, 4 - Escudo da morte" };
 		for (int i = 0; i < especiais.length; i++) {
 			System.out.println("Ataques especiais: " + especiais[i]);
 		}
@@ -54,6 +54,14 @@ public class Guerreiro extends Personagem {
 			return 0;
 
 		}
+	}
+	
+	@Override
+	public void mostrarOpcoes() {
+		System.out.println("Sua vez de atacar, escolha uma das opções:");
+		ataquesNormais();
+		ataquesEspeciais();
+
 	}
 
 }
