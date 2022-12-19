@@ -75,7 +75,7 @@ public class Inimigo {
 	}
 	
 	public int atacar() {
-		System.out.println(this.getNomeAtaque()+" Dano: "+getValorDano());
+		System.out.println("\n" + this.getNomeAtaque()+" \nDano: "+getValorDano());
 		return getValorDano();
 	}
 

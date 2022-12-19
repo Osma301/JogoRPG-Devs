@@ -32,32 +32,32 @@ public class Guerreiro extends Personagem {
 	public int atacar(int ataque) {
 		switch (ataque) {
 		case 1: // Ataque com Soco
-			System.out.println("Ataco com Soco, seu adversário sofreu 5 pontos de dano");
+			System.out.println("Ataco com Soco, seu adversário sofreu 5 pontos de dano\n");
 			setDanoP(20);
 			return getDanoP();
 		case 2: // Cabeçada
-			System.out.println("Ataque com Cabeçada, seu adversário sofreu 8 pontos de dano");
+			System.out.println("Ataque com Cabeçada, seu adversário sofreu 8 pontos de dano\n");
 			setDanoP(21);
 			return getDanoP();
 		case 3: // Patada Brutal
 			if(this.getMp()>=10) {
 				System.out.println(
-					"Ataque especial de Patada brutal seu adversário sofreu 25 pontos de dano, você perdeu 10 pontos de MP.");setDanoP(25);
+					"Ataque especial de Patada brutal seu adversário sofreu 25 pontos de dano, você perdeu 10 pontos de MP.\n");setDanoP(25);
 			setMp(getMp() - 10);
 			return getDanoP();
 			}else {
-			System.out.println("Você não tem MP o suficiente (MP: "+this.getMp()+")");	
+			System.out.println("Você não tem MP o suficiente (MP: "+this.getMp()+")\n");	
 			}
 			
 		case 4: // Escudo Da Morte
 			if(this.getMp()>=10) {
 				System.out.println(
-					"Ataque especial Escudo da Morte seu adversário sofreu 25 pontos de dano, você perdeu 10 pontos de MP.");
+					"Ataque especial Escudo da Morte seu adversário sofreu 25 pontos de dano, você perdeu 10 pontos de MP.\n");
 			setDanoP(25);
 			setMp(getMp() - 10);
 			return getDanoP();
 			}else {
-				System.out.println("Você não tem MP o suficiente (MP: "+this.getMp()+")");	
+				System.out.println("Você não tem MP o suficiente (MP: "+this.getMp()+")\n");	
 			}
 		default:
 			return 0;

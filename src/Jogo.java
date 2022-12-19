@@ -58,7 +58,8 @@ public class Jogo {
 	public void turno() {
 		Scanner scanner = new Scanner(System.in);
 		int aux = this.sorteiaInimigo();
-		System.out.println("Oponente Nº " + this.nOponentes + ": \n");
+		System.out.println("-----------------------------------------------------------------");
+		System.out.println("Oponente Numero " + this.nOponentes + ": \n");
 		System.out.println("Seu oponente " + this.nOponentes + " é:");
 		getInimigos().get(aux).mostrarDados();
 		while (personagem.getVidaP() > 0 && getInimigos().get(aux).getVidaP() > 0) {
@@ -68,7 +69,7 @@ public class Jogo {
 				getInimigos().get(aux).sofrerDano(personagem.atacar(opcao));
 				getInimigos().get(aux).mostrarDados();
 				if (getInimigos().get(aux).getVidaP() > 0) {
-					System.out.println("Turno do seu oponente!");
+					System.out.println("\nTurno do seu oponente!");
 					personagem.recebeDano(getInimigos().get(aux).atacar());
 				}
 				if (personagem.getVidaP() <= 0) {
