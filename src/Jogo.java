@@ -78,12 +78,14 @@ public class Jogo {
 				System.out.println("-----------------------------------------------------------------");
 				// personagem.mostrarAtributos();
 
-		System.out.println("Você derrotou o oponente " + this.nOponentes);
-		personagem.setXp(personagem.getXp() + getInimigos().get(aux).getValorExp());
-		System.out.println("Você ganhou " + getInimigos().get(aux).getValorExp() + " pontos de experiência");
-		personagem.verificaLevel();
-		personagem.mostrarAtributos();
-		this.nOponentes++;
+		if(personagem.getVidaP() > 0) {		
+			System.out.println("Você derrotou o oponente " + this.nOponentes);
+			personagem.setXp(personagem.getXp() + getInimigos().get(aux).getValorExp());
+			System.out.println("Você ganhou " + getInimigos().get(aux).getValorExp() + " pontos de experiência");
+			personagem.verificaLevel();
+			personagem.mostrarAtributos();
+			this.nOponentes++;
+		}
 	}
 
 	public void browser() {
@@ -119,6 +121,7 @@ public class Jogo {
 				}
 				System.out.println("-----------------------------------------------------------------");
 			}
+
 			if(personagem.getVidaP()>0) {
 			System.out.println("Você derrotou o "+(nBrowser+1)+"º browser "+getChefoes().get(nBrowser).getNome());
 			personagem.setXp(personagem.getXp()+getChefoes().get(nBrowser).getXpBoss());
@@ -129,6 +132,8 @@ public class Jogo {
 			}else {
 				System.out.println("O seu personagem morreu!\nFim de jogo!");
 			}
+
+			
 
 	}
 }
