@@ -71,7 +71,8 @@ public class Cacador extends Personagem {
 	
 	@Override
 	public void mostrarOpcoes() {
-		System.out.println("Sua vez de atacar, escolha uma das opções:");
+		
+		System.out.println("\nSua vez de atacar, escolha uma das opções:");
 		ataquesNormais();
 		ataquesEspeciais();
 

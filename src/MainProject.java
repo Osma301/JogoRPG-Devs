@@ -79,7 +79,7 @@ public class MainProject {
 			p1 = guerreiro;
 		}
 		if (escolha == 3) {
-			System.out.println("Você escolheu o Caçador");
+			System.out.println("Você escolheu o Cacador");
 			cacador.mostrarAtributos();
 			cacador.ataquesNormais();
 			cacador.ataquesEspeciais();

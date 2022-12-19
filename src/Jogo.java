@@ -72,7 +72,7 @@ public class Jogo {
 					personagem.recebeDano(getInimigos().get(aux).atacar());
 				}
 				if (personagem.getVidaP() <= 0) {
-					System.out.println("Você morreu, fim de jogo!");
+					System.out.println("\nVocê morreu, fim de jogo!");
 				}
 		}
 				System.out.println("-----------------------------------------------------------------");
