@@ -32,23 +32,23 @@ public class Mago extends Personagem {
 	public int atacar(int ataque) {
 		switch (ataque) {
 		case 1: // Ataque com bastao
-			System.out.println("Ataque com bastão, seu adversário sofreu 10 pontos de dano");
+			System.out.println("Ataque com bastão, seu adversário sofreu 10 pontos de dano\n");
 			setDanoP(10);
 			return getDanoP();
 			
 		case 2: // Soco
-			System.out.println("Ataque com soco, seu adversário sofreu 8 pontos de dano");
+			System.out.println("Ataque com soco, seu adversário sofreu 8 pontos de dano\n");
 			setDanoP(8);
 			return getDanoP();
 			
 		case 3: // Fogo
 			if (this.getMp() >= 10) {
 				System.out.println(
-						"Ataque especial de fogo, você gastou 10mp com este ataque \n seu adversário sofreu 30 pontos de dano");
+						"Ataque especial de fogo, você gastou 10mp com este ataque \n seu adversário sofreu 30 pontos de dano\n");
 				setDanoP(30);
 				this.reduzirMP(10);
 			} else {
-				System.out.println("Você não tem MP o suficiente (MP=" + this.getMp() + ")");
+				System.out.println("Você não tem MP o suficiente (MP=" + this.getMp() + ")\n");
 			}
 
 			return getDanoP();
@@ -58,18 +58,18 @@ public class Mago extends Personagem {
 
 			if (this.getMp() >= 10) {
 				System.out.println(
-						"Ataque especial de gelo, você gastou 10mp com este ataque \n seu adversário sofreu 30 pontos de dano");
+						"Ataque especial de gelo, você gastou 10mp com este ataque \n seu adversário sofreu 30 pontos de dano\n");
 				this.reduzirMP(10);
 				setDanoP(30);
 			} else {
-				System.out.println("Você não tem MP o suficiente (MP=" + this.getMp() + ")");
+				System.out.println("Você não tem MP o suficiente (MP=" + this.getMp() + ")\n");
 			}
 			return getDanoP();
 			
 		case 5: // Raio
 			if (this.getMp() >= 10) {
 				System.out.println(
-						"Ataque especial de raio, você gastou 10mp com este ataque \n seu adversário sofreu 30 pontos de dano");
+						"Ataque especial de raio, você gastou 10mp com este ataque \n seu adversário sofreu 30 pontos de dano\n");
 				this.reduzirMP(10);
 				setDanoP(30);
 			} else {
@@ -78,10 +78,10 @@ public class Mago extends Personagem {
 			
 		case 6: // Cura
 			if (getMp() >= 15) {
-				System.out.println("Ataque especial de cura, você gastou 15mp com este ataque \n você recuperou 30hp");
+				System.out.println("Ataque especial de cura, você gastou 15mp com este ataque \n você recuperou 30hp\n");
 				curar();
 			} else {
-				System.out.println("Você não tem MP suficiente.");
+				System.out.println("Você não tem MP suficiente.\n");
 			}
 			
 		default:
@@ -99,7 +99,7 @@ public class Mago extends Personagem {
 
 	@Override
 	public void mostrarOpcoes() {
-		System.out.println("Sua vez de atacar, escolha uma das opções:");
+		System.out.println("\nSua vez de atacar, escolha uma das opções:");
 		ataquesNormais();
 		ataquesEspeciais();
 

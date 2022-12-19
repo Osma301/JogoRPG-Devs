@@ -36,32 +36,32 @@ public class Cacador extends Personagem {
 	public int atacar(int ataque) {
 		switch (ataque) {
 		case 1: // Estocada Mortal
-			System.out.println("Estocada Mortal, seu adversário sofreu 17 pontos de dano");
+			System.out.println("Estocada Mortal, seu adversário sofreu 17 pontos de dano\n");
 			setDanoP(17);
 			return getDanoP();
 		case 2: // Rede de caça
-			System.out.println("Rede de caça, seu adversário sofreu 15 pontos de dano");
+			System.out.println("Rede de caça, seu adversário sofreu 15 pontos de dano\n");
 			setDanoP(15);
 			return getDanoP();
 		case 3: // Flecha de fogo
 			if (this.getMp() >= 10) {
 				System.out.println(
-						"Flecha de fogo, você gastou 10mp com este ataque \n seu adversário sofreu 30 pontos de dano");
+						"Flecha de fogo, você gastou 10mp com este ataque \n seu adversário sofreu 30 pontos de dano\n");
 				this.reduzirMP(10);
 				setDanoP(30);
 				return getDanoP();
 			} else {
-				System.out.println("Você não tem MP o suficiente (MP: " + this.getMp() + ")");
+				System.out.println("Você não tem MP o suficiente (MP: " + this.getMp() + ")\n");
 			}
 		case 4: // Invocação de lobos
 			if (this.getMp() >= 15) {
 				System.out.println(
-						"Invocação de lobos, você gastou 15mp com este ataque \n seu adversário sofreu 35 pontos de dano");
+						"Invocação de lobos, você gastou 15mp com este ataque \n seu adversário sofreu 35 pontos de danon\n");
 				this.reduzirMP(15);
 				setDanoP(35);
 				return getDanoP();
 			} else {
-				System.out.println("Você não tem MP o suficiente (MP: " + this.getMp() + ")");
+				System.out.println("Você não tem MP o suficiente (MP: " + this.getMp() + ")\n");
 			}
 		default:
 			return 0;
@@ -72,7 +72,7 @@ public class Cacador extends Personagem {
 	
 	@Override
 	public void mostrarOpcoes() {
-		System.out.println("Sua vez de atacar, escolha uma das opções:");
+		System.out.println("\nSua vez de atacar, escolha uma das opções:");
 		ataquesNormais();
 		ataquesEspeciais();
 
