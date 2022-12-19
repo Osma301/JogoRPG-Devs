@@ -25,7 +25,7 @@ public class Cacador extends Personagem {
 	}
 
 	public void ataquesNormais() {
-		String normais[] = { "1 - Estocada Mortal", "2 - Rede de caça" };
+		String normais[] = { "1 - Estocada Mortal 2 - Rede de caça" };
 		for (int i = 0; i < normais.length; i++) {
 			System.out.println("Ataques normais: " + normais[i]);
 		}
