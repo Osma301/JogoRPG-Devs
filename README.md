@@ -15,7 +15,9 @@ git clone "github.com/Osma301/JogoRPGDevs"
 2. Após o clone, abra o projeto no seu editor de código Java de sua preferência. Neste projeto usamos a IDE do Eclipse.
 
 3. Abaixo o padrão dos arquivos do algoritmo e as classes do projeto.
-(aqui vai a foto das classes")
+
+
+<img src="https://user-images.githubusercontent.com/70113922/208683918-d9da8e71-6f9a-445b-8c0b-2b1f5b98ea2f.jpg" width="300px" />
 
 ## 🛠 Stacks
 Utilizado a linguagem Java e a IDE Eclipse.
