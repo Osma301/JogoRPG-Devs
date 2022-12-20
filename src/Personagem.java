@@ -17,9 +17,7 @@ public class Personagem {
 	private String nomeP;
 	public int scolhia;
 	public Object personagemEscolhido;
-	
-	Cacador cacador;
-	Mago mago;
+	public int qtdPocao;
 	
 	Scanner scan = new Scanner(System.in);
 	
@@ -41,6 +39,14 @@ public class Personagem {
 		this.danoP = danoP;
 		this.nomeP = nomeP;
 		this.scolhia = scolhia;
+	}
+
+	public int getQtdPocao() {
+		return qtdPocao;
+	}
+
+	public void setQtdPocao(int qtdPocao) {
+		this.qtdPocao = qtdPocao;
 	}
 
 	public int getXp() {
@@ -115,31 +121,209 @@ public class Personagem {
 		this.scolhia = scolhia;
 	}
 
-	public void habilidades() {
-		String[] habilidades = new String[4];
-		for (int i = 0; i < habilidades.length; i++) {
-			System.out.println("Habilidades do personagem: " + habilidades[i]);
-		}
-	}
-
 	public void recebeDano(int dano) {
 		this.vidaP = vidaP - dano;
 	}
 	
 	public int reduzirMP(int mp) {
-		setMaxMp(this.mp - mp);
-		return getMaxMp();
+		setMp(this.mp - mp);
+		return getMp();
 	}
 	public void curar() {
 		// TODO Auto-generated method stub
 		this.reduzirMP(30);
 		setVidaP(getVidaP()+30);
 	}
-
-	public void pasarDeNivel() {
-		if(getXp() > 10) {
-			setLevelP(getLevelP()+1);}
+	
+	public void mostrarAtributos() {
+		String tipoPersonagem = "";
+		if(this.getScolhia()==1) {
+			tipoPersonagem = "Caçador";
+		}
+		if(this.getScolhia()==2) {
+			tipoPersonagem = "Guerreiro";
+		}
+		if(this.getScolhia()==3) {
+			tipoPersonagem = "Mago";
+		}
+		System.out.println(tipoPersonagem
+				+"\nHP: " + this.getVidaP() + "\nMP: " + this.getMp()
+				+ "\nLevel: " + this.getLevelP()+"\nXP: "+this.getXp());
 	}
 	
+	public void tomarPocao() {
+		if(this.qtdPocao>0) {
+			this.qtdPocao--;
+			if((getMaxVida()-getVidaP())<=50) {
+				setVidaP(getMaxVida());
+			}else {
+				setVidaP(getVidaP()+50);
+			}
+		}
+	}
+
+	public void verificaLevel() {
+		switch (this.getLevelP()) {
+		case 1:
+			if (this.getXp() >= 10) {
+				this.setMaxVida(this.getMaxVida() + (int) (this.getMaxMp() * 0.1));
+				this.setMaxMp(this.getMaxMp() + (int) (this.getMaxMp() * 0.1));
+				this.setVidaP(this.getVidaP() + (int)(this.getVidaP() * 0.2));
+				this.setMp(this.getMaxMp());
+				this.setXp(0);
+				this.setLevelP(2);
+				System.out.println("Parabéns seu personagem evoluiu para o level 2!");
+			}
+			break;
+		case 2:
+			if (this.getXp() >= 12) {
+				this.setMaxVida(this.getMaxVida() + (int)(this.getMaxMp() * 0.1));
+				this.setMaxMp(this.getMaxMp() + (int)(this.getMaxMp() * 0.1));
+				this.setVidaP(this.getVidaP() + (int)(this.getVidaP() * 0.2));
+				this.setMp(this.getMaxMp());
+				this.setXp(0);
+				this.setLevelP(3);
+				System.out.println("Parabéns seu personagem evoluiu para o level 3!");
+				
+			}
+			break;
+		case 3:
+			if (this.getXp() >= 14) {
+				this.setMaxVida(this.getMaxVida() + (int)(this.getMaxMp() * 0.1));
+				this.setMaxMp(this.getMaxMp() + (int)(this.getMaxMp() * 0.1));
+				this.setVidaP(this.getVidaP() + (int)(this.getVidaP() * 0.2));
+				this.setMp(this.getMaxMp());
+				this.setXp(0);
+				this.setLevelP(4);
+				System.out.println("Parabéns seu personagem evoluiu para o level 4!");
+				
+			}
+			break;
+		case 4:
+			if (this.getXp() >= 16) {
+				this.setMaxVida(this.getMaxVida() + (int)(this.getMaxMp() * 0.1));
+				this.setMaxMp(this.getMaxMp() + (int)(this.getMaxMp() * 0.1));
+				this.setVidaP(this.getVidaP() + (int)(this.getVidaP() * 0.2));
+				this.setMp(this.getMaxMp());
+				this.setXp(0);
+				this.setLevelP(5);
+				System.out.println("Parabéns seu personagem evoluiu para o level 5!");
+				
+			}
+			break;
+		case 5:
+			if (this.getXp() >= 18) {
+				this.setMaxVida(this.getMaxVida() + (int)(this.getMaxMp() * 0.1));
+				this.setMaxMp(this.getMaxMp() + (int)(this.getMaxMp() * 0.1));
+				this.setVidaP(this.getVidaP() + (int)(this.getVidaP() * 0.2));
+				this.setMp(this.getMaxMp());
+				this.setXp(0);
+				this.setLevelP(6);
+				System.out.println("Parabéns seu personagem evoluiu para o level 6!");
+				
+			}
+			break;
+		case 6:
+			if (this.getXp() >= 20) {
+				this.setMaxVida(this.getMaxVida() + (int)(this.getMaxMp() * 0.1));
+				this.setMaxMp(this.getMaxMp() + (int)(this.getMaxMp() * 0.1));
+				this.setVidaP(this.getVidaP() + (int)(this.getVidaP() * 0.2));
+				this.setMp(this.getMaxMp());
+				this.setXp(0);
+				this.setLevelP(7);
+				System.out.println("Parabéns seu personagem evoluiu para o level 7!");
+				
+			}
+			break;
+		case 7:
+			if (this.getXp() >= 22) {
+				this.setMaxVida(this.getMaxVida() + (int)(this.getMaxMp() * 0.1));
+				this.setMaxMp(this.getMaxMp() + (int)(this.getMaxMp() * 0.1));
+				this.setVidaP(this.getVidaP() + (int)(this.getVidaP() * 0.2));
+				this.setMp(this.getMaxMp());
+				this.setXp(0);
+				this.setLevelP(8);
+				System.out.println("Parabéns seu personagem evoluiu para o level 8!");
+				
+			}
+			break;
+		case 8:
+			if (this.getXp() >= 24) {
+				this.setMaxVida(this.getMaxVida() + (int)(this.getMaxMp() * 0.1));
+				this.setMaxMp(this.getMaxMp() + (int)(this.getMaxMp() * 0.1));
+				this.setVidaP(this.getVidaP() + (int)(this.getVidaP() * 0.2));
+				this.setMp(this.getMaxMp());
+				this.setXp(0);
+				this.setLevelP(9);
+				System.out.println("Parabéns seu personagem evoluiu para o level 9!");
+				
+			}
+			break;
+		case 9:
+			if (this.getXp() >= 26) {
+				this.setMaxVida(this.getMaxVida() + (int)(this.getMaxMp() * 0.1));
+				this.setMaxMp(this.getMaxMp() + (int)(this.getMaxMp() * 0.1));
+				this.setVidaP(this.getVidaP() + (int)(this.getVidaP() * 0.2));
+				this.setMp(this.getMaxMp());
+				this.setXp(0);
+				this.setLevelP(10);
+				System.out.println("Parabéns seu personagem evoluiu para o level 10!");
+				
+			}
+			break;
+		case 10:
+			if (this.getXp() >= 28) {
+				this.setMaxVida(this.getMaxVida() + (int)(this.getMaxMp() * 0.1));
+				this.setMaxMp(this.getMaxMp() + (int)(this.getMaxMp() * 0.1));
+				this.setVidaP(this.getVidaP() + (int)(this.getVidaP() * 0.2));
+				this.setMp(this.getMaxMp());
+				this.setXp(0);
+				this.setLevelP(11);
+				System.out.println("Parabéns seu personagem evoluiu para o level 11!");
+				
+			}
+			break;
+		case 11:
+			if (this.getXp() >= 30) {
+				this.setMaxVida(this.getMaxVida() + (int)(this.getMaxMp() * 0.1));
+				this.setMaxMp(this.getMaxMp() + (int)(this.getMaxMp() * 0.1));
+				this.setVidaP(this.getVidaP() + (int)(this.getVidaP() * 0.2));
+				this.setMp(this.getMaxMp());
+				this.setXp(0);
+				this.setLevelP(12);
+				System.out.println("Parabéns seu personagem evoluiu para o level 12!");
+				
+			}
+			break;
+		case 12:
+			if (this.getXp() >= 32) {
+				this.setMaxVida(this.getMaxVida() + (int)(this.getMaxMp() * 0.1));
+				this.setMaxMp(this.getMaxMp() + (int)(this.getMaxMp() * 0.1));
+				this.setVidaP(this.getVidaP() + (int)(this.getVidaP() * 0.2));
+				this.setMp(this.getMaxMp());
+				this.setXp(0);
+				this.setLevelP(13);
+				System.out.println("Parabéns seu personagem evoluiu para o level 13!");
+				
+			}
+			break;
+		default:
+			System.out.println();
+			break;
+		}
+	}
+	public void mostrarOpcoes() {
+		
+	}
 	
+	public int atacar(int ataque) {
+		return 0;
+	}
+	
+	public int curaMax() {
+		setVidaP(100);
+		return getVidaP();
+		
+	}
+		
 }
