@@ -1,6 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 package JogoRPGDevs.src;
 
+=======
+import java.util.Random;
+>>>>>>> f07655f342946a52a6e5c99ef3763d1f4a99d586
 
 =======
 import java.util.Random;

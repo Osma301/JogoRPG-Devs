@@ -1,6 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 package JogoRPGDevs.src;
 
+=======
+import java.util.Random;
+>>>>>>> f07655f342946a52a6e5c99ef3763d1f4a99d586
 
 =======
 import java.util.Random;
@@ -20,7 +24,10 @@ public class Mortis extends Boss{
 	}
 	
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f07655f342946a52a6e5c99ef3763d1f4a99d586
 	@Override
 	public int atacar() {
 		Random gerador = new Random();
@@ -42,6 +49,9 @@ public class Mortis extends Boss{
 
 		return 0;
 	}
+<<<<<<< HEAD
+>>>>>>> f07655f342946a52a6e5c99ef3763d1f4a99d586
+=======
 >>>>>>> f07655f342946a52a6e5c99ef3763d1f4a99d586
 	
 }

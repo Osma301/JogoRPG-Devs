@@ -102,8 +102,12 @@ public class Mago extends Personagem{
 	@Override
 	public void mostrarOpcoes() {
 <<<<<<< HEAD
+<<<<<<< HEAD
 		System.out.println("-----------------------------------------------------------------");
 		System.out.println("Sua vez de atacar, escolha uma das opções:");
+=======
+		System.out.println("\nSua vez de atacar, escolha uma das opções:");
+>>>>>>> f07655f342946a52a6e5c99ef3763d1f4a99d586
 =======
 		System.out.println("\nSua vez de atacar, escolha uma das opções:");
 >>>>>>> f07655f342946a52a6e5c99ef3763d1f4a99d586

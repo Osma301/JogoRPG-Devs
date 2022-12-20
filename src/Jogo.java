@@ -62,9 +62,12 @@ public class Jogo {
 		Scanner scanner = new Scanner(System.in);
 		int aux = this.sorteiaInimigo();
 <<<<<<< HEAD
+<<<<<<< HEAD
 		System.out.println("--------------------------------------------------------------------------------");
 		System.out.println("Oponente Nº " + this.nOponentes + ": ");
 =======
+=======
+>>>>>>> f07655f342946a52a6e5c99ef3763d1f4a99d586
 		System.out.println("-----------------------------------------------------------------");
 		System.out.println("Oponente Nº " + this.nOponentes + ": \n");
 >>>>>>> f07655f342946a52a6e5c99ef3763d1f4a99d586
@@ -72,6 +75,7 @@ public class Jogo {
 		getInimigos().get(aux).mostrarDados();
 		System.out.println("--------------------------------------------------------------------------------");
 		while (personagem.getVidaP() > 0 && getInimigos().get(aux).getVidaP() > 0) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 			
 				personagem.mostrarOpcoes();
@@ -99,6 +103,9 @@ public class Jogo {
 			System.out.println("--------------------------------------------------------------------------------");
 =======
 
+=======
+
+>>>>>>> f07655f342946a52a6e5c99ef3763d1f4a99d586
 			personagem.mostrarOpcoes();
 			int opcao = scanner.nextInt();
 			getInimigos().get(aux).sofrerDano(personagem.atacar(opcao));
@@ -120,6 +127,9 @@ public class Jogo {
 		// personagem.mostrarAtributos();
 
 		if (personagem.getVidaP() > 0) {
+<<<<<<< HEAD
+>>>>>>> f07655f342946a52a6e5c99ef3763d1f4a99d586
+=======
 >>>>>>> f07655f342946a52a6e5c99ef3763d1f4a99d586
 			System.out.println("Você derrotou o oponente " + this.nOponentes);
 			personagem.setXp(personagem.getXp() + getInimigos().get(aux).getValorExp());
@@ -165,6 +175,7 @@ public class Jogo {
 			int opcao = scan.nextInt();
 			getChefoes().get(nBrowser).sofrerDano(personagem.atacar(opcao));
 			getChefoes().get(nBrowser).mostrarDados();
+<<<<<<< HEAD
 <<<<<<< HEAD
 			while (personagem.getVidaP() > 0 && getChefoes().get(nBrowser).getVidaBoss() > 0) {
 				personagem.mostrarOpcoes();
@@ -215,6 +226,20 @@ public class Jogo {
 				System.out.println("Você morreu, fim de jogo!");
 >>>>>>> f07655f342946a52a6e5c99ef3763d1f4a99d586
 			}
+=======
+			if (getChefoes().get(nBrowser).getVidaBoss() > 0) {
+				System.out.println("Turno do seu oponente!");
+				personagem.recebeDano(getChefoes().get(nBrowser).atacar());
+				if(getChefoes().get(nBrowser).getValorDanoDebilitante() > 0) {
+					personagem.recebeDano(getChefoes().get(nBrowser).getValorDanoDebilitante());
+					System.out.println("\nVocê sofreu dano debilitante de " + getChefoes().get(nBrowser).getValorDanoDebilitante() + " por " + getChefoes().get(nBrowser).getTipoDanoDeblitante());
+				}
+				System.out.println(" (Seu HP:" + personagem.getVidaP() + ", Seu MP: " + personagem.getMp() + ")");
+			}
+			if (personagem.getVidaP() <= 0) {
+				System.out.println("Você morreu, fim de jogo!");
+			}
+>>>>>>> f07655f342946a52a6e5c99ef3763d1f4a99d586
 			System.out.println("-----------------------------------------------------------------");
 		}
 
