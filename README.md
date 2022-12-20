@@ -1,5 +1,7 @@
 # JogoRPGDevs
 
+<img src="https://user-images.githubusercontent.com/70113922/208583044-0fab4b35-dfaf-4160-9d0e-08325ae7b550.jpg" width="500px" />
+
 +Devs2Blu | Grupo 6 | Projeto - Jogo RPG Turno - RPGDevs
 <br> Professor: Rannyer Thom.
 
