@@ -1,7 +1,7 @@
 # JogoRPGDevs
 
 +Devs2Blu | Grupo 6 | Projeto - Jogo RPG Turno - RPGDevs
-Professor: Rannyer Thom.
+<br> Professor: Rannyer Thom.
 
 ## Orientações sugestivas:
 
@@ -14,20 +14,17 @@ git clone "github.com/Osma301/JogoRPGDevs"
 
 3. Abaixo o padrão dos arquivos do algoritmo e as classes do projeto.
 
-```
-
-
-```
 ## 🛠 Stacks
-Java e IDE Eclipse
+Utilizado a linguagem Java e a IDE Eclipse.
 
-O que aprendemos neste projeto:
+## O que aprendemos neste projeto:
 
-<p>Primeiro Projeto Java que nós desenvolvemos em grupo na formação +Devs2Blu deste semestre. Tal formação, está sendo promovida pela Proway com o apoio de empresas âncoras e a prefeitura da cidade de Blumenau/SC.</p> 
+<p>Primeiro Projeto Java que nós desenvolvemos em grupo na formação +Devs2Blu deste semestre. 
+ <br>Tal formação, está sendo promovida pela Proway com o apoio de empresas âncoras e a prefeitura da cidade de Blumenau/SC.</p> 
 
-Tal engajamento do grupo nos fez aplicar os seguintes conceitos:
+Com o engajamento do grupo nos fez aplicar os seguintes conceitos:
 
-    Orientação a objetos.
+    Programação Orientada a objetos.
     Arraylist.
     Random.
     Scanner.
@@ -35,9 +32,6 @@ Tal engajamento do grupo nos fez aplicar os seguintes conceitos:
     Java AWT.
     @Override.
     Getters and Setters.
-
-```
-
 ```
 # Integrantes do grupo 6
 
