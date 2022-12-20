@@ -14,10 +14,10 @@ git clone "github.com/Osma301/JogoRPGDevs"
 
 3. Abaixo o padrão dos arquivos do algoritmo e as classes do projeto.
 
-## 🛠 Stacks
+##🛠 Stacks
 Utilizado a linguagem Java e a IDE Eclipse.
 
-## O que aprendemos neste projeto:
+##O que aprendemos neste projeto:
 
 <p>Primeiro Projeto Java que nós desenvolvemos em grupo na formação +Devs2Blu deste semestre. 
  <br>Tal formação, está sendo promovida pela Proway com o apoio de empresas âncoras e a prefeitura da cidade de Blumenau/SC.</p> 
