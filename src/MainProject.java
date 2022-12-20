@@ -5,6 +5,7 @@ import java.util.Iterator;
 import java.util.Scanner;
 
 public class MainProject {
+<<<<<<< HEAD
 	public static ArrayList<Inimigo> carregaArray() {
 		ArrayList<Inimigo> inimigos = new ArrayList();
 		Golen golen = new Golen();
@@ -56,11 +57,17 @@ public class MainProject {
 
 	}
 
+=======
+	
+>>>>>>> f07655f342946a52a6e5c99ef3763d1f4a99d586
 	public static void main(String[] args) {
 
+		boolean flag = true;
 		int escolha;
+		int ataque;
 		Jogo jogo = new Jogo();
 		Scanner scan = new Scanner(System.in);
+<<<<<<< HEAD
 		
 		//Cores
 		String b = "\u001B[0m"; //borrar      
@@ -108,6 +115,8 @@ public class MainProject {
 		jogo.setInimigos(inimigos);
 
 		// Classe Jogo
+=======
+>>>>>>> f07655f342946a52a6e5c99ef3763d1f4a99d586
 
 		// Personagems
 
@@ -117,6 +126,7 @@ public class MainProject {
 		Mago mago = new Mago();
 
 		Personagem p1 = new Personagem();
+<<<<<<< HEAD
 		System.out.println(branco+fAmarelo+"Escolha um personagem: (1-) Mago (2-) Guerreiro (3) - Caçador"+b);
 		escolha = scan.nextInt();
 		
@@ -150,12 +160,44 @@ public class MainProject {
 			p1 = cacador;
 		}
 		
+=======
+
+		System.out.println("Escolha um personagem: 1- Mago 2- Guerreiro 3 - Cacador");
+		escolha = scan.nextInt();
+		switch(escolha) {
+			case 1:
+				System.out.println("Você escolheu o Mago");
+				mago.mostrarAtributos();
+				mago.ataquesNormais();
+				mago.ataquesEspeciais();
+				p1 = mago;
+				break;
+			case 2:
+				System.out.println("Você escolheu o Guerreiro");
+				guerreiro.mostrarAtributos();
+				guerreiro.ataquesNormais();
+				guerreiro.ataquesEspeciais();
+				p1 = guerreiro;
+				break;
+			case 3:
+				System.out.println("Você escolheu o Cacador");
+				cacador.mostrarAtributos();
+				cacador.ataquesNormais();
+				cacador.ataquesEspeciais();
+				p1 = cacador;
+				break;
+			default:
+				System.out.println("Você vai ficar com o Mago");
+				break;
+		}
+>>>>>>> f07655f342946a52a6e5c99ef3763d1f4a99d586
 		jogo.setPersonagem(p1);
 		jogo.setnTurno(1);
+		jogo.setChefoes(carregaArrayBoss());
 		int count = 0;
 		do {
+			jogo.setInimigos(carregaArrayInimigos());
 			jogo.turno();
-			jogo.setInimigos(carregaArray());
 			count++;
 			if (count % 3 == 0 && p1.getVidaP() > 0) {
 				jogo.browser();
@@ -170,5 +212,41 @@ public class MainProject {
 		System.out.println(azul+fGris+"\t--------------------------------------------------------------------------------\t"+b);
 		System.out.println(preto+fGris+"Fim de jogo");
 		System.out.println(azul+fGris+"\t--------------------------------------------------------------------------------\t"+b);
+	}
+	
+	public static ArrayList<Inimigo> carregaArrayInimigos() {
+
+		ArrayList<Inimigo> inimigos = new ArrayList();
+
+		Golen golen = new Golen();
+		Gorgona gorgona = new Gorgona();
+		Troll troll = new Troll();
+		MaquinaSanguinaria maquinaSanguinaria = new MaquinaSanguinaria();
+		AlmaMaldita almaMaldita = new AlmaMaldita();
+
+		inimigos.add(golen);
+		inimigos.add(gorgona);
+		inimigos.add(troll);
+		inimigos.add(maquinaSanguinaria);
+		inimigos.add(almaMaldita);
+
+		return inimigos;
+
+	}
+
+	public static ArrayList<Boss> carregaArrayBoss() {
+
+		ArrayList<Boss> boss = new ArrayList();
+
+		Medusa medusa = new Medusa();
+		DestructorSanguinario destructor = new DestructorSanguinario();
+		Mortis mortis = new Mortis();
+
+		boss.add(medusa);
+		boss.add(destructor);
+		boss.add(mortis);
+
+		return boss;
+
 	}
 }

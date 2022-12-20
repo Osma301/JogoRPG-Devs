@@ -9,6 +9,8 @@ public class Gorgona extends Inimigo {
 		super.setValorDano(8);
 		super.setNomeAtaque("Ataque da serpente");
 		super.setNome("Gorgona");
+		super.setValorDanoDebilitante(2);
+		super.setTipoDanoDeblitante("Envenenamento");
 		
 	}
 	

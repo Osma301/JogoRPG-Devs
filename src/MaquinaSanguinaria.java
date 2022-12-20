@@ -9,5 +9,7 @@ public class MaquinaSanguinaria extends Inimigo {
 		super.setValorDano(8);
 		super.setNome("Maquina Sanguinaria");
 		super.setNomeAtaque("Ataque lacerador");
+		super.setValorDanoDebilitante(1);
+		super.setTipoDanoDeblitante("Sangramento");
 	}
 }

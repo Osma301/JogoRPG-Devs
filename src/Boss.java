@@ -10,6 +10,8 @@ public class Boss extends Personagem{
 	private int levelBoss;
 	private int receberAtaque;
 	private int xpBoss;
+	private int valorDanoDeblitante;
+	private String tipoDanoDeblitante;
 	private Random danor = new Random();
 	
 	
@@ -79,7 +81,20 @@ public class Boss extends Personagem{
 	public void setDanor(Random danor) {
 		this.danor = danor;
 	}
-	
+	public int getValorDanoDebilitante() {
+		return valorDanoDeblitante;
+	}
+
+	public void setValorDanoDebilitante(int valorDanoDeblitante) {
+		this.valorDanoDeblitante = valorDanoDeblitante;
+	}
+	public String getTipoDanoDeblitante() {
+		return tipoDanoDeblitante;
+	}
+
+	public void setTipoDanoDeblitante(String tipoDanoDeblitante) {
+		this.tipoDanoDeblitante = tipoDanoDeblitante;
+	}
 	public int atacar() {
 		return 0;
 	}

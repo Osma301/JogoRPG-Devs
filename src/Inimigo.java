@@ -8,6 +8,8 @@ public class Inimigo {
 	private int level;
 	private int valorExp;
 	private int valorDano;
+	private int valorDanoDeblitante;
+	private String tipoDanoDeblitante;
 	private String nomeAtaque;
 	private String nome;
 	
@@ -64,6 +66,20 @@ public class Inimigo {
 		this.valorDano = valorDano;
 	}
 
+	public int getValorDanoDebilitante() {
+		return valorDanoDeblitante;
+	}
+
+	public void setValorDanoDebilitante(int valorDanoDeblitante) {
+		this.valorDanoDeblitante = valorDanoDeblitante;
+	}
+	public String getTipoDanoDeblitante() {
+		return tipoDanoDeblitante;
+	}
+
+	public void setTipoDanoDeblitante(String tipoDanoDeblitante) {
+		this.tipoDanoDeblitante = tipoDanoDeblitante;
+	}
 	public String getNomeAtaque() {
 		return nomeAtaque;
 	}
@@ -77,7 +93,7 @@ public class Inimigo {
 	}
 	
 	public int atacar() {
-		System.out.println(this.getNomeAtaque()+" Dano: "+getValorDano());
+		System.out.print("\n" + this.getNomeAtaque()+"\nDano: "+getValorDano());
 		return getValorDano();
 	}
 
